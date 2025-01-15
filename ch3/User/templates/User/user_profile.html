@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ user_profile.username }}의 프로필</title>
+</head>
+<body>
+    <h1>{{ user_profile.username }}님의 프로필</h1>
+    <p>이메일: {{ user_profile.email }}</p>
+    <p>소개: {{ user_profile.bio }}</p>
+
+    <a href="{% url 'User:logout' %}">로그아웃</a>
+    <a href="{% url 'User:home' %}">홈으로</a>
+</body>
+</html>

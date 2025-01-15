@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+    <h1>환영합니다</h1>
+
+        {% if user.is_authenticated %}
+            <p>안녕하세요 {{user.username}} 님</p>
+
+            <button><a href="{% url 'Post:post_list' %}">게시글 목록</a></button>
+            <button><a href="{% url 'User:user_profile' username=user.username %}">프로필 보기</a></button>
+            <button><a href="{% url 'User:logout' %}">로그아웃</a></button>
+            
+
+        {% else %}
+            <p>어서오세요</p>
+            <a href="{% url 'User:login' %}">로그인</a>
+            <a href="{% url 'User:signup' %}">회원가입</a>
+        {% endif %}
+    </body>
+</html>

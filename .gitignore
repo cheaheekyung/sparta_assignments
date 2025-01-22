@@ -1,0 +1,8 @@
+#venv
+ch3-drf/venv/
+ch3-pure_django/venv/
+
+
+#연습장 파일
+memo.py
+memo.md
